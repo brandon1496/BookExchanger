@@ -10,6 +10,12 @@ namespace BookExchange.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly BookExchangeContext _context;
+        public HomeController(BookExchangeContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
             return View();
